@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "celestial-dynamics"
+version = "0.1.0"
+description = "Planar circular restricted three-body dynamics and phase-space visualisation"
+readme = "README.md"
+license = "MIT"
+authors = [{name = "Flavio Martins"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "scipy>=1.11,<2", "matplotlib>=3.7,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7,<10"]
+
+[project.scripts]
+celestial-dynamics = "celestial_dynamics.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
