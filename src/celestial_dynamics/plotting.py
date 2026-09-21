@@ -20,19 +20,20 @@ def geometry(ax, trajectories, mu, c, *, labels=True):
     ax.contour(x, y, v2, levels=[0], colors=["#b7b1c7"], linewidths=0.8)
     for i, orbit in enumerate(trajectories):
         ax.plot(orbit.states[:, 0], orbit.states[:, 1], lw=0.8, alpha=0.82, color=COLOURS[i%len(COLOURS)])
-    ax.scatter([-mu, 1-mu], [0, 0], s=[58, 17], color=INK, zorder=6)
+    ax.scatter([-mu, 1-mu], [0, 0], s=[58, 17] if labels else [85, 36], color=INK, zorder=6)
     for name, p in lagrange_points(mu).items():
-        ax.scatter(*p, s=13, facecolors=PAPER, edgecolors="#71788b", linewidths=0.6, zorder=5)
+        ax.scatter(*p, s=13 if labels else 30, facecolors=PAPER, edgecolors="#596375", linewidths=0.6 if labels else 1.1, zorder=5)
         if labels:
             ax.annotate(name, p, xytext=(4, 5), textcoords="offset points", fontsize=7, color="#71788b")
     ax.set(xlim=(-1.4, 1.45), ylim=(-1.15, 1.15), aspect="equal")
 
 
-def sections(ax, trajectories):
+def sections(ax, trajectories, *, header=False):
     for i, orbit in enumerate(trajectories):
         if len(orbit.section_states):
             ax.scatter(orbit.section_states[:, 0], orbit.section_states[:, 2],
-                       s=6, color=COLOURS[i%len(COLOURS)], linewidths=0, alpha=0.8)
+                       s=24 if header else 10, color=COLOURS[i%len(COLOURS)],
+                       edgecolors=INK if header else 'none', linewidths=.3 if header else 0, alpha=1 if header else .9)
     ax.set(xlabel="x", ylabel="vx")
 
 
@@ -60,7 +61,7 @@ def save_figures(trajectories, mu, c, out):
     geometry(left, trajectories, mu, c, labels=False)
     left.set_axis_off()
     right = fig.add_axes([0.70, 0.34, 0.25, 0.43], facecolor=PAPER)
-    sections(right, trajectories)
+    sections(right, trajectories, header=True)
     right.set_xticks([])
     right.set_yticks([])
     for spine in right.spines.values():
