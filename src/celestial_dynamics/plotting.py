@@ -3,7 +3,11 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 from .core import potential, lagrange_points
+
+for font_name in ["IBMPlexSans-Regular.ttf", "IBMPlexSans-Medium.ttf"]:
+    font_manager.fontManager.addfont(Path(__file__).parent / "fonts" / font_name)
 
 INK, PAPER = "#24283e", "#f4f5f8"
 COLOURS = ["#7960af", "#8f79bd", "#aa99ca", "#288f91", "#51a5a2", "#8ac1b7", "#c79159", "#cea97a"]
@@ -35,7 +39,7 @@ def sections(ax, trajectories):
 def save_figures(trajectories, mu, c, out):
     out = Path(out)
     plt.rcParams.update({"svg.fonttype": "path", "svg.hashsalt": "celestial-dynamics",
-                         "font.family": "DejaVu Sans", "font.size": 10,
+                         "font.family": "IBM Plex Sans", "font.size": 10,
                          "text.color": INK, "axes.spines.top": False, "axes.spines.right": False})
     fig, axes = plt.subplots(1, 3, figsize=(16, 5), constrained_layout=True)
     geometry(axes[0], trajectories, mu, c)
@@ -62,9 +66,9 @@ def save_figures(trajectories, mu, c, out):
     for spine in right.spines.values():
         spine.set_color("#c9cad5")
     right.set_xlabel("x", size=24)
-    right.set_ylabel("vₓ", size=24, rotation=0, labelpad=16)
-    fig.text(.32, .11, "Orbits", ha="center", size=26, color=INK)
-    fig.text(.8, .11, "Poincaré section", ha="center", size=23, color=INK)
+    right.set_ylabel(r"$\mathregular{v_x}$", size=24, rotation=0, labelpad=16)
+    fig.text(.32, .11, "Orbits", ha="center", size=26, color=INK, weight="medium")
+    fig.text(.8, .11, "Poincaré section", ha="center", size=23, color=INK, weight="medium")
     fig.savefig(out / "header.svg", facecolor=PAPER, metadata={"Date": None})
     fig.savefig(out / "header.png", facecolor=PAPER, dpi=150)
     plt.close(fig)

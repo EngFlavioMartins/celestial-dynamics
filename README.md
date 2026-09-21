@@ -85,3 +85,5 @@ Tests check all five equilibria at several mass ratios, L4 stationarity, Jacobi 
 [Martins & Zanotello, Celestial mechanics and dynamical systems: a review of the circular restricted three-body problem](https://doi.org/10.1590/1806-9126-rbef-2017-0174).
 
 New code and generated artwork use the [MIT licence](LICENSE). The paper retains its own licence. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Plotting uses bundled IBM Plex Sans fonts under their separate [SIL Open Font Licence](src/celestial_dynamics/fonts/OFL.txt). No system font installation is required.

@@ -21,5 +21,9 @@ celestial-dynamics = "celestial_dynamics.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+celestial_dynamics = ["fonts/*.ttf", "fonts/*.txt", "fonts/*.md"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+filterwarnings = ["error:Glyph .* missing from font.*:UserWarning"]
