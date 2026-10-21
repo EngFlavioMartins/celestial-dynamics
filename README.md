@@ -1,6 +1,8 @@
 # Celestial dynamics
 
-![Computed restricted-three-body trajectories and their upward-crossing Poincaré section](docs/assets/header.svg)
+**Orbits, Lagrange points and Poincaré sections of the restricted three-body problem.**
+
+![Effective-potential landscape of the Earth-Moon restricted three-body problem with a computed rosette orbit in the Earth's well, the zero-velocity curve and the five Lagrange points](docs/assets/render.webp)
 
 An accessible Python exploration of the planar circular restricted three-body problem: rotating-frame trajectories, the five Lagrange points, zero-velocity boundaries and Poincaré sections.
 
@@ -80,9 +82,23 @@ python -m pytest -q
 
 Tests check all five equilibria at several mass ratios, L4 stationarity, Jacobi conservation, integration convergence, upward-crossing events and close-approach termination. Each example reports its own numerical errors.
 
-## Reference and licence
+## Website image
 
-[Martins & Zanotello, Celestial mechanics and dynamical systems: a review of the circular restricted three-body problem](https://doi.org/10.1590/1806-9126-rbef-2017-0174).
+```bash
+pip install pyvista cmcrameri
+python scripts/render/compute_landscape.py      # orbit from x = 0.30, C = 3.2
+pvpython scripts/render/render_landscape.py outputs/render/three-body.png
+```
+
+The surface height is −log Ω, a monotonic display transform of the effective potential that compresses the two wells so that the saddles and hills stay visible.
+
+## Citing
+
+This code accompanies F. A. C. Martins and M. Zanotello (2018), Mecânica celeste e a teoria dos sistemas dinâmicos: uma revisão do problema circular restrito de três corpos, *Revista Brasileira de Ensino de Física* 40(2), e2310, [doi:10.1590/1806-9126-rbef-2017-0174](https://doi.org/10.1590/1806-9126-rbef-2017-0174).
+
+GitHub's *Cite this repository* button uses [CITATION.cff](CITATION.cff).
+
+## Licence
 
 New code and generated artwork use the [MIT licence](LICENSE). The paper retains its own licence. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
