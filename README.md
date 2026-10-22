@@ -2,7 +2,7 @@
 
 **Orbits, Lagrange points and Poincaré sections of the restricted three-body problem.**
 
-![Effective-potential landscape of the Earth-Moon system with a computed rosette orbit in the Earth's well, the zero-velocity curve and the five Lagrange points](docs/assets/render.webp)
+<p align="center"><img src="docs/assets/render.webp" width="560" alt="Effective-potential landscape of the Earth-Moon system with a computed rosette orbit in the Earth's well, the zero-velocity curve and the five labelled Lagrange points"></p>
 
 A small Python exploration of the planar circular restricted three-body problem: trajectories in the rotating frame, the five Lagrange points, zero-velocity curves and Poincaré sections.
 
