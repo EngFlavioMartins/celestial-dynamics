@@ -3,6 +3,17 @@ message: "If you use this code, please cite the paper below."
 title: "Celestial dynamics"
 type: software
 license: MIT
+abstract: "Circular restricted three-body problem in Python: Earth-Moon orbits, Lagrange points, zero-velocity curves and Poincar\u00e9 sections (Martins & Zanotello, Rev. Bras. Ensino F\u00eds. 2018)."
+keywords:
+  - "circular restricted three-body problem"
+  - "celestial mechanics"
+  - "Lagrange points"
+  - "Jacobi constant"
+  - "zero-velocity curves"
+  - "Poincar\u00e9 sections"
+  - "dynamical systems"
+  - "KAM theory"
+  - "Python"
 authors:
   - family-names: Martins
     given-names: Flavio A. C.
