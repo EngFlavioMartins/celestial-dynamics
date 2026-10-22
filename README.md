@@ -1,5 +1,13 @@
 # Celestial dynamics
 
+<p align="center">
+  <a href="https://github.com/EngFlavioMartins/celestial-dynamics/actions/workflows/tests.yml"><img src="https://github.com/EngFlavioMartins/celestial-dynamics/actions/workflows/tests.yml/badge.svg" alt="Python checks"></a>
+  <a href="https://doi.org/10.1590/1806-9126-rbef-2017-0174"><img src="https://img.shields.io/badge/paper-10.1590%2F1806--9126--rbef--2017--0174-1F6FEB" alt="paper: 10.1590/1806-9126-rbef-2017-0174"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white" alt="python: 3.10+"></a>
+  <a href="https://github.com/EngFlavioMartins/celestial-dynamics/blob/HEAD/LICENSE"><img src="https://img.shields.io/badge/license-MIT-2E7D32" alt="license: MIT"></a>
+  <a href="https://engflaviomartins.github.io/#celestial-dynamics"><img src="https://img.shields.io/badge/website-research%20page-15212B" alt="website: research page"></a>
+</p>
+
 **Orbits, Lagrange points and Poincaré sections of the restricted three-body problem.**
 
 <p align="center"><img src="docs/assets/render.webp" width="560" alt="Effective-potential landscape of the Earth-Moon system with a computed rosette orbit in the Earth's well, the zero-velocity curve and the five labelled Lagrange points"></p>
