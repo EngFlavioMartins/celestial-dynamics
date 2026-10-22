@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Celestial dynamics"
+type: software
+license: MIT
+authors:
+  - family-names: Martins
+    given-names: Flavio A. C.
+    orcid: https://orcid.org/0000-0002-1374-5760
+repository-code: "https://github.com/EngFlavioMartins/celestial-dynamics"
+preferred-citation:
+  type: article
+  title: "Mecânica celeste e a teoria dos sistemas dinâmicos: uma revisão do problema circular restrito de três corpos"
+  authors:
+    - family-names: Martins
+      given-names: Flavio A. C.
+    - family-names: Zanotello
+      given-names: M.
+  journal: "Revista Brasileira de Ensino de Física"
+  volume: 40
+  issue: 2
+  start: e2310
+  year: 2018
+  doi: "10.1590/1806-9126-rbef-2017-0174"
