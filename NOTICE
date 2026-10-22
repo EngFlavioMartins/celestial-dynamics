@@ -1,0 +1,14 @@
+Celestial dynamics
+Copyright 2018–2026 Flavio A. C. Martins
+
+This product includes software developed by Flavio A. C. Martins
+(https://github.com/EngFlavioMartins/celestial-dynamics).
+
+Under the Apache License 2.0 (section 4d), any redistribution of this software or of a
+derivative work must include this NOTICE file.
+
+If you use this software in academic work, please cite:
+
+    Martins, F. A. C. and Zanotello, M. (2018). Mecanica celeste e a teoria dos sistemas dinamicos: uma revisao do problema circular restrito de tres corpos. Revista Brasileira de Ensino de Fisica 40(2), e2310. https://doi.org/10.1590/1806-9126-rbef-2017-0174
+
+A BibTeX entry is given in README.md, and CITATION.cff provides the citation in other formats.
